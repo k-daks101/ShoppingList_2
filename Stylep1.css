@@ -1,0 +1,155 @@
+/**/
+*,/*utility selector means every element in the css is going to be affected by it*/
+*::before,
+*::after
+
+
+{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box
+}
+
+body
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;/*line height sets the amount of space between text in CSS*/
+  color:blue;
+  background-image: url('IMG/pexels-wdnet-230544.jpg');
+  background-size: cover; /* Ensures the image covers the entire background */
+  /*background-position: center;*/  /* ensures the image is at the center of the page*/
+  background-repeat: no-repeat; /*prevents the image from repeating itself*/
+
+}
+
+
+header 
+{
+  margin-bottom: 30px;
+}
+
+
+header h1
+{
+  font-weight: 300;
+}
+
+
+.container
+{
+  max-width: 500px;
+  /*margin: 30px auto;*/ /*first 30px value sets the top and bottom margin of an element to 30pixels...auto is a special value that tells the browser to calculate the left and right margins to center the element horizontally*/ 
+  padding: 20px;
+}
+
+
+
+/* Form Input */
+
+.form-input
+{
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding:5px;
+  border-radius: 5px;
+   border-style: solid; 
+  /* outline: invert; */
+  background: transparent;
+
+}
+
+.form-input-filter
+{
+  margin-top: 10px;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;  /*targets the width, style, color accordingly*/
+  background: transparent;
+  outline: none;
+}
+
+
+/* Buttons */
+
+.btn
+{
+  background-color: #333;
+  color:#ccc;
+  border: none;
+  padding: 10px 20px;  /*padding top and bottom and padding left and right accordingly*/
+}
+
+.btn:hover
+{
+  background: red;
+
+}
+
+.btn-link
+{
+  font-size: 16px;
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: auto;
+  cursor: pointer;
+}
+
+/* Clear Button */
+.btn-clear
+{
+  margin-top: 20px;
+  width: 100%;
+  font-size: 16px;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  cursor: pointer;
+
+}
+
+
+.btn-clear:hover
+{
+  background-color: aquamarine;
+}
+
+
+/* Items */
+
+.items
+{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items li
+{
+  display: flex; /*makes an element a flex container,enabling the flex layout model for its children*/
+  justify-content: space-between; /*allows items to wrap onto multiple lines when they exceed the containers limit*/
+  width: 50%;
+  border: 1px solid #ccc; /*targets the width style and color accordingly*/
+  padding: 10px 15px; /*sets the margin top and margin bottom to 10 and 15 pixels respectively*/
+  margin: 0 5px 20px; /*sets the top margin to 0 pixels, the right and left to 5pixels, and the bottom to 20pixels*/
+  font-weight: 700; /*used for emphasizing text, like boldening text*/
+
+
+}
+
+
+
+@media (max-width:500px) /*enclosed style list will appear when the viewport is 500pixels or less*/
+{
+
+  .items li /*section being targeted*/
+  {
+    width: 100%; /*makes the list items being displayed in the web appear 100% when the viewport is less than 500pixels*/
+  }
+}
+

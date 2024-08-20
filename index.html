@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping List Project Phase 2</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+  integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="Stylep1.css">
+</head>
+<!--remember, the classes and divs are for the CSS and the JavaScript-->
+<body>
+  <div class="container">
+    <header>
+      <h1>Shopping List</h1> <!--where the shopping text is going to be displayed-->
+    </header>
+    <form id="item-form"> <!--id means the id alloted to the form tag for css and JavaScript manipulation-->
+      <div class="form-control"> <!--class alloted is for css and JavaScript manipulation-->
+        <input
+        type="text" 
+        class="form-input"
+        id="item-input"
+        name="item"
+        placeholder="Enter Item"/> <!--placeholder text displays the tex that is inside the text box before the user inputs something inside it-->
+      </div>
+
+      <div class="form-control">
+        <button type="submit" class="btn"> <i class="fa-solid fa-plus"></i>Add Item</button> <!--type'submit' in button means that the button will submit when it is fired off...plus the fa-solid and the fa-plus is from font awesome.... add item is what is shown on the submit button-->
+      </div>
+    </form>
+
+    <div class="filter">
+      <input 
+      type="text"
+      class="form-input-filter"
+      id="filter"
+      placeholder="Filter Items here"/>
+    </div>
+    
+    <ul id="item-list" class="items">
+     
+   
+    </ul>
+    
+    <button id="clear" class="btn-clear">Clear All</button>
+  </div>
+
+
+<script src="script79.js"></script>
+
+
+<!--   
+   <li>
+        Apples
+        <button class="remove-item btn-link text red">  class on the button
+          <i class="fa-solid fa-xmark"></i>  we are trying to create an icon, the 'x' and it is from font-awesome
+        </button>
+      </li>
+
+
+
+    <li>
+        Mango
+        <button class="remove-item btn-link text red">  class on thr button
+          <i class="fa-solid fa-xmark"></i>  --we are trying to create an icon, the 'x' and it is from font-awesome
+        </button>
+      </li>
+      <li>
+        Eggs
+        <button class="remove-item btn-link text red">  --class on the button
+          <i class="fa-solid fa-xmark"></i>  we are trying to create an icon, the 'x' and it is from font-awesome
+        </button>
+      </li>
+
+
+
+         <li>
+        Orange Juice
+        <button class="remove-item btn-link text red">  class on the button
+          <i class="fa-solid fa-xmark"></i>  we are trying to create an icon, the 'x' and it is from font-awesome
+        </button>
+      </li>
+    -->
+</body>
+</html>
