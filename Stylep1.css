@@ -36,7 +36,7 @@ header h1 {
 
 
 .container {
-  max-width: 500px;
+  max-width: 420px;
   margin: 30px 0 30px 30px;
   /* shift container towards left with left margin */
   padding: 20px;
