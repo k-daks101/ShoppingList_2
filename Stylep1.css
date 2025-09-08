@@ -1,73 +1,74 @@
 /**/
-*,/*utility selector means every element in the css is going to be affected by it*/
+*,
+/*utility selector means every element in the css is going to be affected by it*/
 *::before,
-*::after
-
-
-{
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing:border-box
+  box-sizing: border-box
 }
 
-body
-{
+body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1.5;/*line height sets the amount of space between text in CSS*/
-  color:blue;
+  line-height: 1.5;
+  /*line height sets the amount of space between text in CSS*/
+  color: #1a1a1a;
   background-image: url('IMG/pexels-wdnet-230544.jpg');
-  background-size: cover; /* Ensures the image covers the entire background */
-  /*background-position: center;*/  /* ensures the image is at the center of the page*/
-  background-repeat: no-repeat; /*prevents the image from repeating itself*/
+  background-size: cover;
+  /* Ensures the image covers the entire background */
+  /*background-position: center;*/
+  /* ensures the image is at the center of the page*/
+  background-repeat: no-repeat;
+  /*prevents the image from repeating itself*/
 
 }
 
 
-header 
-{
+header {
   margin-bottom: 30px;
 }
 
 
-header h1
-{
+header h1 {
   font-weight: 300;
 }
 
 
-.container
-{
+.container {
   max-width: 500px;
-  /*margin: 30px auto;*/ /*first 30px value sets the top and bottom margin of an element to 30pixels...auto is a special value that tells the browser to calculate the left and right margins to center the element horizontally*/ 
+  margin: 30px auto;
+  /*first 30px value sets the top and bottom margin of an element to 30pixels...auto is a special value that tells the browser to calculate the left and right margins to center the element horizontally*/
   padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 
 
 /* Form Input */
 
-.form-input
-{
+.form-input {
   width: 100%;
   font-size: 20px;
   margin-bottom: 10px;
-  padding:5px;
+  padding: 5px;
   border-radius: 5px;
-   border-style: solid; 
+  border: 1px solid #bbb;
   /* outline: invert; */
   background: transparent;
 
 }
 
-.form-input-filter
-{
+.form-input-filter {
   margin-top: 10px;
   width: 100%;
   font-size: 20px;
   margin-bottom: 10px;
   padding: 5px;
-  border-bottom: 1px solid #ccc;  /*targets the width, style, color accordingly*/
+  border: 1px solid #bbb;
+  /*targets the width, style, color accordingly*/
   background: transparent;
   outline: none;
 }
@@ -75,33 +76,33 @@ header h1
 
 /* Buttons */
 
-.btn
-{
-  background-color: #333;
-  color:#ccc;
+.btn {
+  background-color: #1f6feb;
+  color: #fff;
   border: none;
-  padding: 10px 20px;  /*padding top and bottom and padding left and right accordingly*/
+  padding: 10px 20px;
+  /*padding top and bottom and padding left and right accordingly*/
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.05s ease;
 }
 
-.btn:hover
-{
-  background: red;
+.btn:hover {
+  background: #1158c7;
+  transform: translateY(-1px);
 
 }
 
-.btn-link
-{
+.btn-link {
   font-size: 16px;
   background-color: transparent;
   color: #333;
   border: none;
-  padding: auto;
+  padding: 0 6px;
   cursor: pointer;
 }
 
 /* Clear Button */
-.btn-clear
-{
+.btn-clear {
   margin-top: 20px;
   width: 100%;
   font-size: 16px;
@@ -110,46 +111,82 @@ header h1
   border: 1px solid #333;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
 
 }
 
 
-.btn-clear:hover
-{
-  background-color: aquamarine;
+.btn-clear:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 
 /* Items */
 
-.items
-{
+.items {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
-.items li
-{
-  display: flex; /*makes an element a flex container,enabling the flex layout model for its children*/
-  justify-content: space-between; /*allows items to wrap onto multiple lines when they exceed the containers limit*/
-  width: 50%;
-  border: 1px solid #ccc; /*targets the width style and color accordingly*/
-  padding: 10px 15px; /*sets the margin top and margin bottom to 10 and 15 pixels respectively*/
-  margin: 0 5px 20px; /*sets the top margin to 0 pixels, the right and left to 5pixels, and the bottom to 20pixels*/
-  font-weight: 700; /*used for emphasizing text, like boldening text*/
+.items li {
+  display: flex;
+  /*makes an element a flex container,enabling the flex layout model for its children*/
+  justify-content: space-between;
+  /*allows items to wrap onto multiple lines when they exceed the containers limit*/
+  width: calc(50% - 10px);
+  border: 1px solid #ddd;
+  /*targets the width style and color accordingly*/
+  background: #fff;
+  padding: 10px 12px;
+  /*sets the margin top and margin bottom to 10 and 15 pixels respectively*/
+  margin: 0 0 10px;
+  /*sets the top margin to 0 pixels, the right and left to 5pixels, and the bottom to 20pixels*/
+  font-weight: 700;
+  /*used for emphasizing text, like boldening text*/
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 
 
 }
 
 
 
-@media (max-width:500px) /*enclosed style list will appear when the viewport is 500pixels or less*/
-{
-
-  .items li /*section being targeted*/
+@media (max-width:500px)
+/*enclosed style list will appear when the viewport is 500pixels or less*/
   {
-    width: 100%; /*makes the list items being displayed in the web appear 100% when the viewport is less than 500pixels*/
+
+  .items li
+
+  /*section being targeted*/
+    {
+    width: 100%;
+    /*makes the list items being displayed in the web appear 100% when the viewport is less than 500pixels*/
   }
 }
 
+/* Accessibility helpers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus styles */
+.form-input:focus,
+.form-input-filter:focus,
+.btn:focus,
+.btn-clear:focus,
+.btn-link:focus {
+  outline: 2px solid #1f6feb;
+  outline-offset: 2px;
+}

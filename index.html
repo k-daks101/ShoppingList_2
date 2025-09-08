@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple shopping list app with add, filter, and local storage support.">
   <title>Shopping List Project Phase 2</title>
   <link
   rel="stylesheet"
@@ -18,8 +19,9 @@
     <header>
       <h1>Shopping List</h1> <!--where the shopping text is going to be displayed-->
     </header>
-    <form id="item-form"> <!--id means the id alloted to the form tag for css and JavaScript manipulation-->
+    <form id="item-form" aria-label="Add shopping list item" autocomplete="off" novalidate> <!--id means the id alloted to the form tag for css and JavaScript manipulation-->
       <div class="form-control"> <!--class alloted is for css and JavaScript manipulation-->
+        <label for="item-input" class="sr-only">Item name</label>
         <input
         type="text" 
         class="form-input"
@@ -29,11 +31,12 @@
       </div>
 
       <div class="form-control">
-        <button type="submit" class="btn"> <i class="fa-solid fa-plus"></i>Add Item</button> <!--type'submit' in button means that the button will submit when it is fired off...plus the fa-solid and the fa-plus is from font awesome.... add item is what is shown on the submit button-->
+        <button type="submit" class="btn"> <i class="fa-solid fa-plus" aria-hidden="true"></i> Add Item</button> <!--type'submit' in button means that the button will submit when it is fired off...plus the fa-solid and the fa-plus is from font awesome.... add item is what is shown on the submit button-->
       </div>
     </form>
 
     <div class="filter">
+      <label for="filter" class="sr-only">Filter items</label>
       <input 
       type="text"
       class="form-input-filter"
@@ -45,6 +48,7 @@
      
    
     </ul>
+    <p id="empty-state" aria-live="polite" style="display:none;color:#333;margin-top:10px;">No items yet. Add your first item above.</p>
     
     <button id="clear" class="btn-clear">Clear All</button>
   </div>
